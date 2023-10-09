@@ -1,2 +1,2 @@
 # SQL-hackerrank-problems
-SQL hackerrank problems done by me.
+SQL problems that I have done in HackerRank.
