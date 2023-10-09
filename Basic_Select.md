@@ -146,16 +146,39 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 
 **Solution**
 ```sql
-
+select distinct(city) from station where city like 'A%' or city like 'E%' or city like 'I%' or city like 'O%' or city like 'U%';
+```
+or
+```sql
+select distinct(city) from station where substr(city,1,1) in ('A','E','I','O','U');
 ```
 
-### **[]()**
+### **[Weather Observation Station 7](https://www.hackerrank.com/challenges/weather-observation-station-7/problem?isFullScreen=true)**
+Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION. Your result cannot contain duplicates.
+
+Input Format
+
+The STATION table is described as follows:
+
+![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/a0c4af75-3897-4a8e-be53-08275b65877b)
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
 
 **Solution**
 ```sql
-
+select distinct(city) from station where city like '%A' or city like '%E' or city like '%I' or city like '%O' or city like '%U';
 ```
-### **[]()**
+
+### **[Weather Observation Station 8](https://www.hackerrank.com/challenges/weather-observation-station-8/problem?isFullScreen=true)**
+Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. Your result cannot contain duplicates.
+
+Input Format
+
+The STATION table is described as follows:
+
+![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/5cb2eaa0-ce8b-4986-aba5-46e2b9691826)
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
 
 **Solution**
 ```sql
