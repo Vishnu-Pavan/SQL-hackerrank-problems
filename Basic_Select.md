@@ -6,3 +6,9 @@ The CITY table is described as follows:
 
 ![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/906a83c2-19d1-4eaf-b263-2c08b1b535cd)
 
+**Solution**
+```sql
+Select * from city where countrycode = 'USA' and population >100000;
+```
+
+
