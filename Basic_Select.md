@@ -133,6 +133,40 @@ select city c, length(city) l from station order by l asc,c asc limit 1;
 select city c, length(city) l from station order by l desc,c asc limit 1;
 ```
 
+### **[Weather Observation Station 6](https://www.hackerrank.com/challenges/weather-observation-station-6/problem?isFullScreen=true)**
+Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
+
+Input Format
+
+The STATION table is described as follows:
+
+![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/b81a848e-e271-4670-b1ba-a5ee5b2ffd14)
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+**Solution**
+```sql
+
+```
+
+### **[]()**
+
+**Solution**
+```sql
+
+```
+### **[]()**
+
+**Solution**
+```sql
+
+```
+### **[]()**
+
+**Solution**
+```sql
+
+```
 ### **[]()**
 
 **Solution**
