@@ -285,23 +285,74 @@ Only Ashley, Julia, and Belvet have Marks > **75** . If you look at the last thr
 select name from students where marks>75 order by substr(name,length(name)-2,3),id;
 ```
 
-### **[]()**
+### **[Employee Names](https://www.hackerrank.com/challenges/name-of-employees/problem?isFullScreen=true)**
+Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
+
+Input Format
+
+The Employee table containing employee data for a company is described as follows:
+
+![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/e09fec80-31ae-4fc0-b2d1-b75efbcdb34f)
+
+where employee_id is an employee's ID number, name is their name, months is the total number of months they've been working for the company, and salary is their monthly salary.
+
+Sample Input
+
+![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/cffcb257-730d-4e70-a577-d03f0bd9542b)
+
+Sample Output
+
+Angela
+Bonnie
+Frank
+Joe
+Kimberly
+Lisa
+Michael
+Patrick
+Rose
+Todd
 
 **Solution**
 ```sql
-
+select name from employee order by name asc;
 ```
 
-### **[]()**
+### **[Employee Salaries](https://www.hackerrank.com/challenges/salary-of-employees/problem?isFullScreen=true)**
+Write a query that prints a list of employee names (i.e.: the name attribute) for employees in Employee having a salary greater than $2000 per month who have been employees for less than 10 months. Sort your result by ascending employee_id.
+
+Input Format
+
+The Employee table containing employee data for a company is described as follows:
+
+![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/f6c81f96-7f9a-4994-b2a2-2af205bfdf5b)
+
+where employee_id is an employee's ID number, name is their name, months is the total number of months they've been working for the company, and salary is the their monthly salary.
+
+Sample Input
+
+![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/9a464da2-ecf8-4245-9307-899d38ecfee7)
+
+
+Sample Output
+
+Angela
+Michael
+Todd
+Joe
+Explanation
+
+Angela has been an employee for 1 month and earns $3443 per month.
+
+Michael has been an employee for 6 months and earns $2017 per month.
+
+Todd has been an employee for 5 months and earns $3396 per month.
+
+Joe has been an employee for 9 months and earns #3573 per month.
+
+We order our output by ascending employee_id.
 
 **Solution**
 ```sql
-
-```
-
-### **[]()**
-
-**Solution**
-```sql
-
+select name from employee where salary>2000 and months<10 order by employee_id;
 ```
