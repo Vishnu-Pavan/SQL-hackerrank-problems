@@ -188,12 +188,117 @@ or
 ```SQL
 select DISTINCT city from station where left(city,1) in ('a', 'e', 'i', 'o', 'u') and right(city,1) in ('a', 'e', 'i', 'o', 'u');
 ```
+
+### **[Weather Observation Station 9](https://www.hackerrank.com/challenges/weather-observation-station-9/problem?isFullScreen=true)**
+Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
+
+Input Format
+
+The STATION table is described as follows:
+
+![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/33480ca1-2d7f-40b7-96c7-63a1a90e5555)
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+**Solution**
+```sql
+select DISTINCT city from station where left(city,1) not in ('a', 'e', 'i', 'o', 'u');
+```
+
+### **[Weather Observation Station 10](https://www.hackerrank.com/challenges/weather-observation-station-10/problem?isFullScreen=true)**
+Query the list of CITY names from STATION that do not end with vowels. Your result cannot contain duplicates.
+
+Input Format
+
+The STATION table is described as follows:
+
+![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/523db8f0-ff52-4f89-bbbc-927a15d1e7a2)
+
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+**Solution**
+```sql
+select DISTINCT city from station where right(city,1) not in ('a', 'e', 'i', 'o', 'u');
+```
+or
+```sql
+select DISTINCT city from station where SUBSTR(city, length(city), 1) NOT IN ('A','E','I','O','U');
+```
+### **[Weather Observation Station 11](https://www.hackerrank.com/challenges/weather-observation-station-11/problem?isFullScreen=true)**
+Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
+
+Input Format
+
+The STATION table is described as follows:
+
+![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/d967a79a-6590-4ac2-91ff-3fd10e1fadb7)
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+**Solution**
+```sql
+select DISTINCT city from station where left(city,1) not in ('a', 'e', 'i', 'o', 'u') or right(city,1) not in ('a', 'e', 'i', 'o', 'u');
+```
+
+### **[Weather Observation Station 12](https://www.hackerrank.com/challenges/weather-observation-station-12/problem?isFullScreen=true)**
+Query the list of CITY names from STATION that do not start with vowels and do not end with vowels. Your result cannot contain duplicates.
+
+Input Format
+
+The STATION table is described as follows:
+
+![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/4f86b3b0-1cec-49c3-b559-550fc33bcd41)
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+**Solution**
+```sql
+select DISTINCT city from station where left(city,1) not in ('a', 'e', 'i', 'o', 'u') and right(city,1) not in ('a', 'e', 'i', 'o', 'u');
+```
+
+### **[Higher Than 75 Marks](https://www.hackerrank.com/challenges/more-than-75-marks/problem?isFullScreen=true)**
+Query the Name of any student in STUDENTS who scored higher than  Marks. Order your output by the last three characters of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
+
+Input Format
+The STUDENTS table is described as follows:
+
+![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/aee31aae-ccc1-4582-a632-ba69ecced2ae)
+
+The Name column only contains uppercase (A-Z) and lowercase (a-z) letters.
+
+Sample Input
+
+![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/5c2fd7b6-8fc4-4135-9ce8-511e74dc4ca7)
+
+Sample Output
+
+Ashley
+Julia
+Belvet
+Explanation
+
+Only Ashley, Julia, and Belvet have Marks > **75** . If you look at the last three characters of each of their names, there are no duplicates and 'ley' < 'lia' < 'vet'.
+
+**Solution**
+```sql
+select name from students where marks>75 order by substr(name,length(name)-2,3),id;
+```
+
 ### **[]()**
 
 **Solution**
 ```sql
 
 ```
+
+### **[]()**
+
+**Solution**
+```sql
+
+```
+
 ### **[]()**
 
 **Solution**
