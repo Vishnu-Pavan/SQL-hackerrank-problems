@@ -182,7 +182,11 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 
 **Solution**
 ```sql
-
+select DISTINCT city from station where (city like 'A%' or city like 'E%' or city like 'I%' or city like 'O%' or city like 'U%') and (city like '%A' or city like '%E' or city like '%I' or city like '%O' or city like '%U');
+```
+or
+```SQL
+select DISTINCT city from station where left(city,1) in ('a', 'e', 'i', 'o', 'u') and right(city,1) in ('a', 'e', 'i', 'o', 'u');
 ```
 ### **[]()**
 
