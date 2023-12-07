@@ -91,5 +91,57 @@ The results of the second query are ascendingly ordered first by number of names
 
 **Solution**
 ```sql
+select 
+    CONCAT(name,"(",SUBSTRING(occupation, 1, 1),")" ) 
+from OCCUPATIONS 
+ORDER BY name;
+
+select 
+    CONCAT("There are a total of ",count(*)," ",LOWER(occupation),"s.") 
+from OCCUPATIONS 
+group by occupation
+ORDER BY count(*) ASC, occupation;
+```
+
+### **[Occupations](https://www.hackerrank.com/challenges/occupations/problem?isFullScreen=true)**
+
+Pivot the Occupation column in OCCUPATIONS so that each Name is sorted alphabetically and displayed underneath its corresponding Occupation. The output column headers should be Doctor, Professor, Singer, and Actor, respectively.
+
+Note: Print NULL when there are no more names corresponding to an occupation.
+
+Input Format
+
+The OCCUPATIONS table is described as follows:
+
+![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/20fbff55-20c5-4955-9ac1-1043778f3010)
+
+Occupation will only contain one of the following values: Doctor, Professor, Singer or Actor.
+
+Sample Input
+
+![image](https://github.com/Vishnu-Pavan/SQL-hackerrank-problems/assets/83069735/2b3f4d8a-fc05-4abf-9ce7-23edc32a3330)
+
+Sample Output
+
+Jenny    Ashley     Meera  Jane
+Samantha Christeen  Priya  Julia
+NULL     Ketty      NULL   Maria
+Explanation
+
+The first column is an alphabetically ordered list of Doctor names.
+The second column is an alphabetically ordered list of Professor names.
+The third column is an alphabetically ordered list of Singer names.
+The fourth column is an alphabetically ordered list of Actor names.
+The empty cell data for columns with less than the maximum number of names per occupation (in this case, the Professor and Actor columns) are filled with NULL values.
+
+**Solution**
+```sql
+
+```
+
+### **[]()**
+
+**Solution**
+```sql
 
 ```
